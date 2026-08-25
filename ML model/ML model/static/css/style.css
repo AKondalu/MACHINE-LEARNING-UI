@@ -1,0 +1,430 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:250px;
+    background:#1f2937;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    overflow:auto;
+}
+
+.logo{
+    text-align:center;
+    padding:25px;
+    font-size:24px;
+    font-weight:bold;
+    background:#111827;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 25px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#2563eb;
+}
+
+.sidebar ul li.active a{
+    background:#2563eb;
+}
+
+.sidebar i{
+    width:20px;
+}
+
+/* ================= MAIN ================= */
+
+.main-content{
+    margin-left:250px;
+    width:100%;
+    padding:30px;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    font-size:30px;
+    color:#222;
+}
+
+.topbar p{
+    color:gray;
+    margin-top:5px;
+}
+
+.admin{
+    background:white;
+    padding:12px 20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    font-weight:600;
+}
+
+.admin i{
+    color:#2563eb;
+    margin-right:10px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.card{
+    color:white;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:15px;
+}
+
+/* Card Colors */
+
+.blue{
+    background:#2563eb;
+}
+
+.green{
+    background:#10b981;
+}
+
+.red{
+    background:#ef4444;
+}
+
+.purple{
+    background:#8b5cf6;
+}
+
+/* ================= CHARTS ================= */
+
+.charts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.chart-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.chart-box h3{
+    margin-bottom:20px;
+    color:#333;
+}
+
+/* ================= INFO ================= */
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.info-box h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* ================= TABLE ================= */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+    background:#f5f5f5;
+}
+
+/* ================= FORM ================= */
+
+.form-container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1748a8;
+}
+
+/* ================= RESULT CARD ================= */
+
+.result-card{
+    background:white;
+    margin-top:30px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.result-card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.result-card h1{
+    font-size:45px;
+    color:#10b981;
+}
+
+.result-card p{
+    margin-top:15px;
+    color:#555;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.sidebar{
+    width:70px;
+}
+
+.logo h2{
+    display:none;
+}
+
+.sidebar ul li a{
+    justify-content:center;
+}
+
+.sidebar ul li a span{
+    display:none;
+}
+
+.main-content{
+    margin-left:70px;
+}
+
+.topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.charts{
+    grid-template-columns:1fr;
+}
+
+}
+/* Prediction Form Grid */
+
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+form button{
+    grid-column:1/3;
+}
+
+@media(max-width:768px){
+
+form{
+    grid-template-columns:1fr;
+}
+
+form button{
+    grid-column:1;
+}
+
+}
+/* RESULT PAGE */
+
+.result-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.result-card h1{
+
+    font-size:50px;
+
+    color:#10b981;
+
+    margin:15px 0;
+
+}
+
+.result-card h2{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+.result-card h3{
+
+    color:#444;
+
+    margin-top:20px;
+
+}
+
+.result-card i{
+
+    margin-bottom:20px;
+
+}
+/* ================= TABLE IMPROVEMENTS ================= */
+
+table{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+thead{
+    background:#2563eb;
+}
+
+tbody tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+tbody tr:hover{
+    background:#dbeafe;
+}

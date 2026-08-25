@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>SmartPlacement</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/predict">
+                    <i class="fa-solid fa-brain"></i>
+                    Predict
+                </a>
+            </li>
+
+            <li>
+                <a href="/students">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="/analytics">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Placement Prediction</h1>
+
+                <p>Enter Student Details</p>
+
+            </div>
+
+        </div>
+
+        <div class="form-container">
+
+            <form action="/predict" method="POST">
+
+                <div class="form-group">
+                    <label>Student ID</label>
+                    <input type="number" name="studentid">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" name="city">
+                </div>
+
+                <div class="form-group">
+                    <label>College Tier</label>
+
+                    <select name="tier">
+                        <option>Tier 1</option>
+                        <option>Tier 2</option>
+                        <option>Tier 3</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label>CGPA</label>
+                    <input type="number" step="0.01" name="cgpa">
+                </div>
+
+                <div class="form-group">
+                    <label>Attendance (%)</label>
+                    <input type="number" name="attendance">
+                </div>
+
+                <div class="form-group">
+                    <label>Internships</label>
+                    <input type="number" name="internships">
+                </div>
+
+                <div class="form-group">
+                    <label>Projects</label>
+                    <input type="number" name="projects">
+                </div>
+
+                <div class="form-group">
+                    <label>Certifications</label>
+                    <input type="number" name="certifications">
+                </div>
+
+                <div class="form-group">
+                    <label>Aptitude Score</label>
+                    <input type="number" name="aptitude">
+                </div>
+
+                <div class="form-group">
+                    <label>Coding Score</label>
+                    <input type="number" name="coding">
+                </div>
+
+                <div class="form-group">
+                    <label>Soft Skills Rating</label>
+                    <input type="number" name="softskills">
+                </div>
+
+                <div class="form-group">
+                    <label>Mock Interview Score</label>
+                    <input type="number" name="mock">
+                </div>
+
+                <div class="form-group">
+                    <label>History Of Backlogs</label>
+
+                    <select name="backlogs">
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+
+                </div>
+
+                <button class="btn">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    Predict Placement
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

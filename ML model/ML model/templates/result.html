@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>SmartPlacement</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/predict">
+                    <i class="fa-solid fa-brain"></i>
+                    Predict
+                </a>
+            </li>
+
+            <li>
+                <a href="/students">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="/analytics">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Prediction Result</h1>
+
+                <p>Student Placement Prediction</p>
+
+            </div>
+
+        </div>
+
+        <div class="result-card">
+
+            <i class="fa-solid fa-circle-check"
+               style="font-size:80px;color:#10b981;"></i>
+
+            <h2>Placement Status</h2>
+
+            <h1>{{ prediction }}</h1>
+
+            <br>
+
+            <h3>Expected Salary Package</h3>
+
+            <h2>{{ salary }}</h2>
+
+            <br>
+
+            <h3>Placement Probability</h3>
+
+            <h2>{{ probability }} %</h2>
+
+            <br><br>
+
+            <a href="/predict">
+
+                <button class="btn">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Predict Again
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

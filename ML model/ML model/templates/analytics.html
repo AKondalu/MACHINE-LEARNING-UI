@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>SmartPlacement</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/predict">
+                    <i class="fa-solid fa-brain"></i>
+                    Predict
+                </a>
+            </li>
+
+            <li>
+                <a href="/students">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/analytics">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Analytics Dashboard</h1>
+
+                <p>Placement Dataset Statistics</p>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics Cards -->
+
+        <div class="cards">
+
+            <div class="card blue">
+                <i class="fa-solid fa-users"></i>
+                <h2>50,000</h2>
+                <p>Total Students</p>
+            </div>
+
+            <div class="card green">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>57.4%</h2>
+                <p>Placement Rate</p>
+            </div>
+
+            <div class="card purple">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>7.84</h2>
+                <p>Average CGPA</p>
+            </div>
+
+            <div class="card red">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <h2>7.25 LPA</h2>
+                <p>Average Salary</p>
+            </div>
+
+        </div>
+
+        <!-- Charts -->
+
+        <div class="charts">
+
+            <div class="chart-box">
+
+                <h3>Placement Status</h3>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+            <div class="chart-box">
+
+                <h3>Salary Distribution</h3>
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Dataset Summary -->
+
+        <div class="info-box">
+
+            <h3>Dataset Summary</h3>
+
+            <table>
+
+                <tr>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </tr>
+
+                <tr>
+                    <td>Total Records</td>
+                    <td>50,000</td>
+                </tr>
+
+                <tr>
+                    <td>Number of Features</td>
+                    <td>32</td>
+                </tr>
+
+                <tr>
+                    <td>Prediction Type</td>
+                    <td>Classification</td>
+                </tr>
+
+                <tr>
+                    <td>Target Column</td>
+                    <td>PlacementStatus</td>
+                </tr>
+
+                <tr>
+                    <td>Average Salary</td>
+                    <td>7.25 LPA</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

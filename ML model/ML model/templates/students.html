@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Students</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>SmartPlacement</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/predict">
+                    <i class="fa-solid fa-brain"></i>
+                    Predict
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="/students">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="/analytics">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Students Dataset</h1>
+
+                <p>Preview of Placement Dataset</p>
+
+            </div>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Gender</th>
+                    <th>CGPA</th>
+                    <th>Attendance</th>
+                    <th>Coding</th>
+                    <th>Aptitude</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1001</td>
+                    <td>Male</td>
+                    <td>8.90</td>
+                    <td>91%</td>
+                    <td>87</td>
+                    <td>84</td>
+                    <td style="color:green;font-weight:bold;">
+                        Placed
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>1002</td>
+                    <td>Female</td>
+                    <td>7.25</td>
+                    <td>83%</td>
+                    <td>70</td>
+                    <td>72</td>
+                    <td style="color:red;font-weight:bold;">
+                        Not Placed
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>1003</td>
+                    <td>Male</td>
+                    <td>9.15</td>
+                    <td>96%</td>
+                    <td>95</td>
+                    <td>91</td>
+                    <td style="color:green;font-weight:bold;">
+                        Placed
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>1004</td>
+                    <td>Female</td>
+                    <td>8.40</td>
+                    <td>88%</td>
+                    <td>82</td>
+                    <td>79</td>
+                    <td style="color:green;font-weight:bold;">
+                        Placed
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>1005</td>
+                    <td>Male</td>
+                    <td>6.80</td>
+                    <td>75%</td>
+                    <td>62</td>
+                    <td>66</td>
+                    <td style="color:red;font-weight:bold;">
+                        Not Placed
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

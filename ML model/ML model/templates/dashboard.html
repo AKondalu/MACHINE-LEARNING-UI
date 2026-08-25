@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Placement Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <h2>SmartPlacement</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/predict">
+                    <i class="fa-solid fa-brain"></i>
+                    Predict
+                </a>
+            </li>
+
+            <li>
+                <a href="/students">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="/analytics">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle-question"></i>
+                    Help
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Welcome to SmartPlacement</h1>
+
+                <p>Student Placement Prediction Dashboard</p>
+
+            </div>
+
+            <div class="admin">
+
+                <i class="fa-solid fa-user"></i>
+
+                Admin
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+            <div class="card blue">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2>50,000</h2>
+
+                <p>Total Students</p>
+
+            </div>
+
+            <div class="card green">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>28,732</h2>
+
+                <p>Placed Students</p>
+
+            </div>
+
+            <div class="card red">
+
+                <i class="fa-solid fa-circle-xmark"></i>
+
+                <h2>21,268</h2>
+
+                <p>Not Placed</p>
+
+            </div>
+
+            <div class="card purple">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <h2>₹7.25 LPA</h2>
+
+                <p>Average Salary</p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Charts -->
+
+        <div class="charts">
+
+            <div class="chart-box">
+
+                <h3>Placement Status Distribution</h3>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+            <div class="chart-box">
+
+                <h3>Salary Distribution</h3>
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Information Box -->
+
+        <div class="info-box">
+
+            <h3>About the System</h3>
+
+            <p>
+
+                This Student Placement Prediction System predicts whether a student
+
+                is likely to get placed based on academic and skill parameters.
+
+                It also estimates the expected salary package using Machine Learning.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
